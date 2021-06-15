@@ -48,6 +48,7 @@ function Contact({ breakPoints }) {
 			  id="contact-form" 
 			  method="POST"
 			  data-netlify="true"
+			  action="thank-you"
 			  >
 			  	<input 
 			  	type="hidden" 
