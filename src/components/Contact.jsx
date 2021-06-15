@@ -61,84 +61,82 @@ function Contact({ breakPoints }) {
 			  <form 
 			  id="contact-form" 
 			  method="POST"
-			  onSubmit={handleSubmit((data) => {
-			  	onSubmit(data);
-			  })}
+			  data-netlify="true"
 			  >
 			    <div className="form__group">
 
-			        <label
-			        className="form__label" 
-			        htmlFor="name">
-			        Name
-			        </label>
+		        <label
+		        className="form__label" 
+		        htmlFor="name">
+		        Name
+		        </label>
 
-			        <input {
-			        	...register("name", {
-			        		required: "This field is required" 
-			        	})}
-			        type="text" 
-			        className="form__field"     
-			        placeholder="Jane Appleseed"
-			        style={{ outline: errors.name ?  "2px solid var(--bright-red" : null }}
-			        />
+		        <input {
+		        	...register("name", {
+		        		required: "This field is required" 
+		        	})}
+		        type="text" 
+		        className="form__field"     
+		        placeholder="Jane Appleseed"
+		        style={{ outline: errors.name ?  "2px solid var(--bright-red" : null }}
+		        />
 
-			        {errors.name && 
-			        	<span className="form__error">{errors.name.message}</span>
-			        }
-
-			    </div>
-
-			    <div className="form__group">
-
-			        <label
-			        className="form__label" 
-			        htmlFor="exampleInputEmail1">
-			        Email Address
-			        </label>
-
-			        <input {
-			        	...register("email", {
-			        		required: "This field is required",
-			        		pattern: {
-			        			value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-			        			message: "Please use a valid email address"
-			        		}
-			        	})}
-			        type="text"
-			        className="form__field"
-			        placeholder="email@example.com"
-			        style={{ outline: errors.email ?  "2px solid var(--bright-red" : null }}
-			        />
-
-			        {errors.email && 
-			        	<span className="form__error">{errors.email.message}</span>
-			        }
+		        {errors.name && 
+		        	<span className="form__error">{errors.name.message}</span>
+		        }
 
 			    </div>
 
 			    <div className="form__group">
 
-			        <label
-			        className="form__label" 
-			        htmlFor="message">
-			        Message
-			        </label>
+		        <label
+		        className="form__label" 
+		        htmlFor="exampleInputEmail1">
+		        Email Address
+		        </label>
 
-			        <textarea {
-			        	...register("message", {
-			        		required: "This field is required" 
-			        	})}
-			        className="form__field" 
-			        rows="3"        
-			        placeholder="How can I help?"
-			        style={{ outline: errors.message ?  "2px solid var(--bright-red" : null }}
-			        >
-			        </textarea>
+		        <input {
+		        	...register("email", {
+		        		required: "This field is required",
+		        		pattern: {
+		        			value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+		        			message: "Please use a valid email address"
+		        		}
+		        	})}
+		        type="text"
+		        className="form__field"
+		        placeholder="email@example.com"
+		        style={{ outline: errors.email ?  "2px solid var(--bright-red" : null }}
+		        />
 
-			        {errors.message && 
-			        	<span className="form__error">{errors.message.message}</span>
-			        }
+		        {errors.email && 
+		        	<span className="form__error">{errors.email.message}</span>
+		        }
+
+			    </div>
+
+			    <div className="form__group">
+
+		        <label
+		        className="form__label" 
+		        htmlFor="message">
+		        Message
+		        </label>
+
+		        <textarea {
+		        	...register("message", {
+		        		required: "This field is required" 
+		        	})}
+		        className="form__field" 
+		        rows="3"        
+		        placeholder="How can I help?"
+		        style={{ outline: errors.message ?  "2px solid var(--bright-red" : null }}
+		        >
+		        </textarea>
+
+		        {errors.message && 
+		        	<span className="form__error">{errors.message.message}</span>
+		        }
 
 			    </div>
 
