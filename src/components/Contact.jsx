@@ -1,26 +1,17 @@
 import { useForm } from "react-hook-form";
-import githubIcon from "../images/icons/github.svg";
-import twitterIcon from "../images/icons/twitter.svg";
-import linkedinIcon from "../images/icons/linkedin.svg";
 
 function Contact({ breakPoints }) {
 
-  async function onSubmit(data) {
-  	const response = await fetch("/", {
+  function onSubmit(data, e) {
+  	fetch("/", {
   		method: "POST",
-  		headers: {
-  			"Content-Type": "application/x-www-form-urlencoded"
-  		},
-  		body: JSON.stringify({data})
-  	});
-
-  	if (response.ok) {
-  		alert("Thanks for getting in touch, I will get back to you shortly.");
-  		document.getElementById("contact-form").reset();
-  	} else {
-  		alert("Something went wrong, please try again.")
-  	}
-  }
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: JSON.stringify({data})
+  	})
+  		.then(() => alert("Success!"))
+    	.catch(error => alert(error));
+    e.preventDefault();
+  } 
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
