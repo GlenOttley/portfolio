@@ -60,6 +60,7 @@ function Contact({ breakPoints }) {
 
 			  <form 
 			  id="contact-form" 
+			  name="contact-form" 
 			  method="POST"
 			  data-netlify="true"
 			  >
