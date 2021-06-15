@@ -1,27 +1,6 @@
 import { useForm } from "react-hook-form";
-import githubIcon from "../images/icons/github.svg";
-import twitterIcon from "../images/icons/twitter.svg";
-import linkedinIcon from "../images/icons/linkedin.svg";
 
 function Contact({ breakPoints }) {
-
-  async function onSubmit(data) {
-  	const response = await fetch("/submit", {
-  		method: "POST",
-  		headers: {
-  			"Content-Type": "application/json"
-  		},
-  		body: JSON.stringify({data})
-  	});
-
-  	if (response.ok) {
-  		alert("Thanks for getting in touch, I will get back to you shortly.");
-  		document.getElementById("contact-form").reset();
-  	} else {
-  		alert("Something went wrong, please try again.")
-  	}
-  }
-
   const { register, handleSubmit, formState: { errors } } = useForm();
 
 	return (
@@ -47,10 +26,9 @@ function Contact({ breakPoints }) {
 		  	<h2 className="form__heading">Contact Me</h2>
 
 			  <form 
-			  id="contact-form" 
 			  name="contact-form" 
 			  method="POST"
-			  data-netlify="true"
+			  netlify
 			  >
 			    <div className="form__group">
 
@@ -64,7 +42,7 @@ function Contact({ breakPoints }) {
 		        	...register("name", {
 		        		required: "This field is required" 
 		        	})}
-		        	name="name"
+		        name="name"
 		        type="text" 
 		        className="form__field"     
 		        placeholder="Jane Appleseed"
@@ -132,11 +110,13 @@ function Contact({ breakPoints }) {
 
 			    </div>
 
-			    <button 
+			    <input 
 			    type="submit"
-	  			className="btn btn-primary">
-	  				<p className="btn__text btn-primary__text">SEND MESSAGE</p>
-	  			</button>
+			    value="SEND MESSAGE"
+	  			className="btn btn-primary"
+	  			/>
+	  				
+	  			
 
 				</form>
 
