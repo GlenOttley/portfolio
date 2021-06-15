@@ -38,18 +38,6 @@ function Contact({ breakPoints }) {
 					Diligent, optimistic and detail-oriented, 
 					I think I would be an asset to your web development team.  
 					Please get in touch using this form. </p>
-
-				  {/*<div className="row contact__icons">
-		    		<img
-		    		alt="github logo"
-		    		src={githubIcon} />
-		    		<img
-		    		alt="twitter logo"
-		    		src={twitterIcon} />
-		    		<img
-		    		alt="linkedin logo"
-		    		src={linkedinIcon} />
-		    	</div>*/}
 		    </div>
 
 		  </div>
@@ -76,6 +64,7 @@ function Contact({ breakPoints }) {
 		        	...register("name", {
 		        		required: "This field is required" 
 		        	})}
+		        	name="name"
 		        type="text" 
 		        className="form__field"     
 		        placeholder="Jane Appleseed"
@@ -104,6 +93,7 @@ function Contact({ breakPoints }) {
 		        			message: "Please use a valid email address"
 		        		}
 		        	})}
+		        name="email"
 		        type="text"
 		        className="form__field"
 		        placeholder="email@example.com"
@@ -128,6 +118,7 @@ function Contact({ breakPoints }) {
 		        	...register("message", {
 		        		required: "This field is required" 
 		        	})}
+		        name="message"
 		        className="form__field" 
 		        rows="3"        
 		        placeholder="How can I help?"
