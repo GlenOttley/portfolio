@@ -28,6 +28,7 @@ function Contact({ breakPoints }) {
 			  <form 
 			  name="contact-form" 
 			  method="POST"
+			  enctype="application/x-www-form-urlencoded"
 			  netlify
 			  >
 			    <div className="form__group">
@@ -110,13 +111,11 @@ function Contact({ breakPoints }) {
 
 			    </div>
 
-			    <input 
+			    <button 
 			    type="submit"
-			    value="SEND MESSAGE"
-	  			className="btn btn-primary"
-	  			/>
-	  				
-	  			
+	  			className="btn btn-primary">
+	  				<p className="btn__text btn-primary__text">SEND MESSAGE</p>
+	  			</button>
 
 				</form>
 
