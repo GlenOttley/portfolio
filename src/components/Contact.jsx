@@ -48,13 +48,14 @@ function Contact({ breakPoints }) {
 			  id="contact-form" 
 			  method="POST"
 			  data-netlify="true"
+			  onSubmit={handleSubmit(data)}
 			  >
 			  	<input 
 			  	type="hidden" 
 			  	name="form-name" 
 			  	value="contact-form" 
 			  	/>
-			  	
+
 			    <div className="form__group">
 
 			        <label
