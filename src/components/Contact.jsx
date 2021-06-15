@@ -2,22 +2,22 @@ import { useForm } from "react-hook-form";
 
 function Contact({ breakPoints }) {
 
-  async function onSubmit(data) {
-  	const response = await fetch("/submit", {
-  		method: "POST",
-  		headers: {
-  			"Content-Type": "application/json"
-  		},
-  		body: JSON.stringify({data})
-  	});
+  // async function onSubmit(data) {
+  // 	const response = await fetch("/submit", {
+  // 		method: "POST",
+  // 		headers: {
+  // 			"Content-Type": "application/json"
+  // 		},
+  // 		body: JSON.stringify({data})
+  // 	});
 
-  	if (response.ok) {
-  		alert("Thanks for getting in touch, I will get back to you shortly.");
-  		document.getElementById("contact-form").reset();
-  	} else {
-  		alert("Something went wrong, please try again.")
-  	}
-  }
+  // 	if (response.ok) {
+  // 		alert("Thanks for getting in touch, I will get back to you shortly.");
+  // 		document.getElementById("contact-form").reset();
+  // 	} else {
+  // 		alert("Something went wrong, please try again.")
+  // 	}
+  // }
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -49,6 +49,7 @@ function Contact({ breakPoints }) {
 			  method="POST"
 			  data-netlify="true"
 			  action="thank-you"
+			  onSubmit={handleSubmit}
 			  >
 			  	<input 
 			  	type="hidden" 
