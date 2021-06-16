@@ -14,7 +14,6 @@ function Contact({ breakPoints }) {
   });
 
   const [state, setState] = useState({});
-  const [feedbackMsg, setFeedbackMsg] = useState();
   
   const handleChange = e => setState({
   	...state, [e.target.name]: e.target.value
@@ -31,13 +30,11 @@ function Contact({ breakPoints }) {
   		})
   	})
   	.then(response => {
-  		setFeedbackMsg("Thanks for reaching out. I'll get back to you soon.");
-  		reset()
-  		console.log(response);
+  		alert("Thanks for getting in touch, I will get back to you shortly.");
+  		reset();
   	})
   	.catch(error => {
-  		setFeedbackMsg("Oops, something went wrong. The form could not be submitted.");
-  		console.log(error);
+  		alert("Something went wrong, please try again.");
   	})
   }
 
