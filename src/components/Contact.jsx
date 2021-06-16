@@ -71,6 +71,7 @@ function Contact({ breakPoints }) {
 			  data-netlify="true"
 			  data-netlify-honeypot="bot-field"
 			  onSubmit={handleSubmit(onSubmit)}
+			  action="thank-you"
 			  >
 
 			  	<input type="hidden" name="form-name" value="contact" />
