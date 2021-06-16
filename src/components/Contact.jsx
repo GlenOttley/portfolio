@@ -1,19 +1,46 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 function Contact({ breakPoints }) {
 
-  function onSubmit(data, e) {
+	function encode(data) {
+	  return Object.keys(data)
+	    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+	    .join('&')
+	}
+
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({
+  	mode: "onChange"
+  });
+
+  const [state, setState] = useState({});
+  const [feedbackMsg, setFeedbackMsg] = useState();
+  
+  const handleChange = e => setState({
+  	...state, [e.target.name]: e.target.value
+  })
+
+  const onSubmit = (data, e) => {
+  	e.preventDefault();
   	fetch("/", {
   		method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify({data})
+  		headers: {"Content-Type": "application/x-www-form-urlencoded"},
+  		body: encode({
+  			"form-name": "contact-form",
+  			...state
+  		})
   	})
-  		.then(() => alert("Success!"))
-    	.catch(error => alert(error));
-    e.preventDefault();
-  } 
+  	.then(response => {
+  		setFeedbackMsg("Thanks for reaching out. I'll get back to you soon.");
+  		reset()
+  		console.log(response);
+  	})
+  	.catch(error => {
+  		setFeedbackMsg("Oops, something went wrong. The form could not be submitted.");
+  		console.log(error);
+  	})
+  }
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
 
 	return (
 		<div className="contact container">
@@ -39,11 +66,15 @@ function Contact({ breakPoints }) {
 
 			  <form 
 			  id="contact-form" 
+			  name="contact-form"
 			  method="POST"
-			  onSubmit={handleSubmit((data) => {
-			  	onSubmit(data)
-			  })}
+			  data-netlify="true"
+			  data-netlify-honeypot="bot-field"
+			  onSubmit={handleSubmit(onSubmit)}
 			  >
+
+			  	<input type="hidden" name="form-name" value="contact" />
+
 			    <div className="form__group">
 
 		        <label
@@ -57,6 +88,8 @@ function Contact({ breakPoints }) {
 		        		required: "This field is required" 
 		        	})}
 		        type="text" 
+		        name="name"
+		        onChange={handleChange}
 		        className="form__field"     
 		        placeholder="Jane Appleseed"
 		        style={{ outline: errors.name ?  "2px solid var(--bright-red" : null }}
@@ -85,6 +118,8 @@ function Contact({ breakPoints }) {
 		        		}
 		        	})}
 		        type="text"
+		        name="email"
+		        onChange={handleChange}
 		        className="form__field"
 		        placeholder="email@example.com"
 		        style={{ outline: errors.email ?  "2px solid var(--bright-red" : null }}
@@ -109,6 +144,8 @@ function Contact({ breakPoints }) {
 		        		required: "This field is required" 
 		        	})}
 		        className="form__field" 
+		        name="message"
+		        onChange={handleChange}
 		        rows="3"        
 		        placeholder="How can I help?"
 		        style={{ outline: errors.message ?  "2px solid var(--bright-red" : null }}
