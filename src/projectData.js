@@ -2,11 +2,7 @@ const projectData = [
 {	
 	path: "/planets-fact-site",
 	heading: "Planets Fact Site",
-	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-	 Nulla in sodales orci. Proin vel metus neque. 
-	 Cras vitae sapien massa. Maecenas eleifend eros a gravida tristique. 
-	 Cras eget tempor nisl, id feugiat erat. 
-	 Suspendisse cursus justo eu condimentum dictum.`,
+	description: `This is a test`,
   skills: "Interaction Design / Responsive Design",
   languages: "HTML / CSS / JS / React",
   website: "https://glenottley.github.io/planets-fact-site",
