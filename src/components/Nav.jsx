@@ -30,11 +30,15 @@ function Nav({ breakPoints, active, setActive }, ref) {
   return (	
   	<>
 	    <nav className="nav">
-		    <div className="container row spaced">	
-		    	<img
-		    	className="nav__logo"
-		    	alt="logo" 
-		    	src={logo} />
+		    <div className="container row spaced">
+
+		    	<Link to="/">
+	    			<img
+			    	className="nav__logo"
+			    	alt="logo" 
+			    	src={logo} />
+	    		</Link>	
+		    	
 
 		    	{ breakPoints.mobileSm || breakPoints.mobileLg ?
 		    	

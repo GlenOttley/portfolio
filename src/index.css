@@ -290,6 +290,7 @@ ABOUT
 .about__message {
 	border-top: 1px solid var(--light-grey);
 	border-bottom: 1px solid var(--light-grey);
+	padding-bottom: 2em;
 }
 
 
@@ -310,6 +311,7 @@ ABOUT
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		padding-bottom: 0;
 	}
 
 	.about__link {
