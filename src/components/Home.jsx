@@ -13,7 +13,7 @@ import profilePicture from "../images/homepage/profile.jpg";
 
 import downArrows from "../images/icons/down-arrows.svg";
 
-function Home({ breakPoints }) {
+function Home({ breakPoints, setActive }) {
 
 	const aboutRef = useRef();
 
@@ -88,7 +88,10 @@ function Home({ breakPoints }) {
 
 				  <Link
 				  to="/portfolio"
-				  className="link about__link">
+				  className="link about__link"
+				  onClick={
+		    		() => { setActive("portfolio") }
+		    	}>
 					  <button className="btn btn-secondary">
 					  	<p className="btn__text btn-secondary__text">GO TO PORTFOLIO</p>
 					  </button>

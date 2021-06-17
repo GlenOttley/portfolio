@@ -41,7 +41,9 @@ function App() {
 		    	<Route 
 		    	exact path="/" 
 		    	render={() => (
-		    		<Home breakPoints={breakPoints} />
+		    		<Home 
+		    		breakPoints={breakPoints}
+		    		setActive={setActive} />
 		    		)}
 		    	/>
 
