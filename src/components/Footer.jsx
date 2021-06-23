@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
-import githubIcon from "../images/icons/github.svg";
 
 function Footer({ active, setActive }) {
 
@@ -9,10 +8,14 @@ function Footer({ active, setActive }) {
 		
 		<div className="footer">
 			<div className="footer__main container">
-  			<img
-  			className="footer__icon footer__logo"
-  			alt="logo"
-  			src={logo} />
+
+				<Link to="/">
+    			<img
+	  			className="footer__icon footer__logo"
+	  			alt="logo"
+	  			src={logo} />
+    		</Link>	
+  			
   			
   			<ul className="footer__list">
 	    		<Link 
@@ -48,19 +51,10 @@ function Footer({ active, setActive }) {
 	    		href="https://github.com/GlenOttley/"
 	    		target="_blank"
 	    		rel="noreferrer">
-		    		<img
-		    		className="footer__icon"
-		    		alt="github logo"
-		    		src={githubIcon} />
+		    		<i 
+		    		className="footer__icon fab fa-2x fa-github"
+		    		alt="github icon"></i>
 		    	</a>
-	    		{/*<img
-	    		className="footer__icon"
-	    		alt="twitter logo"
-	    		src={twitterIcon} />
-	    		<img
-	    		className="footer__icon"
-	    		alt="linkedin logo"
-	    		src={linkedinIcon} />*/}
 	    	</div>
 	    </div>
 

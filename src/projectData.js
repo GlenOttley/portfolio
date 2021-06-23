@@ -1,5 +1,29 @@
 const projectData = [
 {	
+	path: "/url-shortener",
+	heading: "URL Shortener",
+	description: `This URL shortening landing page interacts with the bitly API using JavaScript fetch requests. 
+	This has been one of the most SASS-heavy projects I have attempted so far, with extensive use of mixins to create 
+	the responsive design.`,
+  skills: "API Interaction / Responsive Design",
+  languages: "HTML / CSS / SASS / JS / React",
+  website: "https://admiring-poitras-636607.netlify.app/",
+  code: "https://github.com/GlenOttley/url-shortening-api-master",
+  background: `One of the trickier aspects of this design was getting the main image to stick to the right 
+	side of the screen whislt mainining a consistent margin with the rest of the page on the left. I achieved this by 
+	performing some artimetic in SASS which calculates the container width for this section.`,
+  frontendMentor: true,
+  prevProjectName: "Crowdfund",
+  prevProjectPath: "crowdfund",
+  nextProjectName: "Planets Fact Site",
+  nextProjectPath: "planets-fact-site",
+
+  portfolio: require("./images/portfolio/url-shortener/url-shortener-portfolio.webp").default,
+  hero: require("./images/portfolio/url-shortener/url-shortener-hero.jpg").default,
+  preview1: require("./images/portfolio/url-shortener/url-shortener-preview-1.webp").default,
+  preview2: null
+},
+{	
 	path: "/planets-fact-site",
 	heading: "Planets Fact Site",
 	description: `To make this eight page fact site about the planets in our solar system, 
@@ -9,15 +33,15 @@ const projectData = [
 	Finally, a simple state hook determines what information and image needs to be displayed for each planet. 
 	Out of this world!`,
   skills: "Interaction Design / Responsive Design",
-  languages: "HTML / CSS / JS / React",
+  languages: "HTML / CSS / SASS / JS / React",
   website: "https://glenottley.github.io/planets-fact-site",
   code: "https://github.com/GlenOttley/planets-fact-site",
   background: `I tend to prefer a vanilla CSS approach wherever possible, but since this project required a 
   fairly significant amount of media queries, I chose to utilise SASS mixins and variables. 
   It's one of my more recent projects and it's one that I’m particularly proud of.`,
   frontendMentor: true,
-  prevProjectName: "Crowdfund",
-  prevProjectPath: "crowdfund",
+  prevProjectName: "URL Shortener",
+  prevProjectPath: "url-shortener",
   nextProjectName: "To Do",
   nextProjectPath: "to-do",
 
@@ -71,8 +95,8 @@ const projectData = [
   frontendMentor: true,
   prevProjectName: "To Do",
   prevProjectPath: "to-do",
-  nextProjectName: "Planets Fact Site",
-  nextProjectPath: "planets-fact-site",
+  nextProjectName: "URL Shortener",
+  nextProjectPath: "url-shortener",
 
   portfolio: require("./images/portfolio/crowdfund/crowdfund-portfolio.jpeg").default,
   hero: require("./images/portfolio/crowdfund/crowdfund-hero.jpeg").default,

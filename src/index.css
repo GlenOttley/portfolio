@@ -1,6 +1,6 @@
 :root {
 	/* primary */
-	--slighly-desaturated-cyan: #5FB4A2;
+	--slightly-desaturated-cyan: #5FB4A2;
 	--dark-blue: #203A4C;
 	--grayish-dark-blue: #33323D;
 
@@ -12,6 +12,7 @@
 
 *, *::before, *::after {
 	box-sizing: border-box;
+	transition: all 0.2s ease-in-out;
 }
 
 body {
@@ -137,7 +138,7 @@ BUTTONS
 } 
 
 .btn-primary:hover, .btn-primary:hover > * {
-	background-color: var(--slighly-desaturated-cyan);
+	background-color: var(--slightly-desaturated-cyan);
 }
 
 .btn-primary:hover > .btn-primary__arrows > object {
@@ -216,7 +217,7 @@ NAV
 }
 
 .nav__item:hover, .item--active {
-	color: var(--slighly-desaturated-cyan);
+	color: var(--slightly-desaturated-cyan);
 }
 
 /**********
@@ -396,6 +397,8 @@ PROJECT-DETAIL
 *************/
 
 .project__image--detail {
+	display: flex;
+	justify-content: center;
 	margin-bottom: 2em;
 }
 
@@ -412,7 +415,7 @@ PROJECT-DETAIL
 }
 
 .highlight {
-	color: var(--slighly-desaturated-cyan);
+	color: var(--slightly-desaturated-cyan);
 	font-size: 13px;
 	font-weight: bold;
 	margin-bottom: 0;
@@ -545,7 +548,7 @@ CONTACT
 }
 
 .form__field:focus {
-	outline: 2px solid var(--slighly-desaturated-cyan);
+	outline: 2px solid var(--slightly-desaturated-cyan);
 }
 
 .form__error {
@@ -651,13 +654,11 @@ FOOTER
 }
 
 .footer__icon {
-	filter: 
-		brightness(0)
-		saturate(100%)
-		invert(100%) 
-		sepia(8%) 
-		hue-rotate(157deg) 
-		contrast(108%); 
+	color: white;
+}
+
+.footer__icon:hover {
+	color: var(--slightly-desaturated-cyan);
 }
 
 @media (min-width: 640px) {
@@ -672,6 +673,13 @@ FOOTER
 
 	.footer__logo {
 		margin-right: 1em;
+		filter: 
+			brightness(0)
+			saturate(100%)
+			invert(100%) 
+			sepia(8%) 
+			hue-rotate(157deg) 
+			contrast(108%); 
 	}
 
 	.footer__list {

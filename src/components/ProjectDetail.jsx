@@ -8,7 +8,7 @@ function ProjectDetail({ project, breakPoints }) {
 	return (
 		<div className="project--detail container">
 
-			<div className="project__image--detail project__hero">
+			<div className="project__image--detail">
 				<img
 					alt="project hero"
 					src={project.hero} 
