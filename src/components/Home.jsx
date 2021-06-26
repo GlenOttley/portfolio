@@ -82,7 +82,6 @@ function Home({ breakPoints, setActive }) {
   				Flask is my go-to framework for Python development but I can adapt here too. 
   				<br></br>
   				<br></br>
-  				I hope to find a role on a great team in Toronto or working remotely. 
   				Please check out my work below!
 					</p>
 

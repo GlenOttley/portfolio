@@ -48,8 +48,8 @@ function Contact({ breakPoints }) {
 				<div className="contact__right">
 					<p>Thank you for taking the time to peruse my portfolio so far. 
 					I’d love to hear what you’re working on and how I could help. 
-					I’m looking for an exciting new role with a great company in Toronto, 
-					but I’m also open to working as part of a remote team elsewhere.
+					I’m looking for an exciting new role with a great company
+					in office or remote.
 					Diligent, optimistic and detail-oriented, 
 					I think I would be an asset to your web development team.  
 					Please get in touch using this form. </p>
