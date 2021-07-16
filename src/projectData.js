@@ -1,5 +1,25 @@
 const projectData = [
 {	
+  path: "/countries-fact-site",
+  heading: "Countries Fact Site",
+  description: `This web app interacts with the REST Countries API to present information about every country on earth!`,
+  skills: "API Interaction / Responsive Design",
+  languages: "HTML / CSS / SASS / JS / React / Redux",
+  website: "https://zealous-heyrovsky-19478f.netlify.app/",
+  code: "https://github.com/GlenOttley/rest-countries-api",
+  background: `Although perhaps a little overkill for a project such as this, Redux is used for state management on this project. API requests are made using Thunks, both for fetching all of the countries as well as each individual country.`,
+  frontendMentor: true,
+  prevProjectName: "Crowdfund",
+  prevProjectPath: "crowdfund",
+  nextProjectName: "URL Shortener",
+  nextProjectPath: "url-shortener",
+
+  portfolio: require("./images/portfolio/countries/countries-portfolio.webp").default,
+  hero: require("./images/portfolio/countries/countries-hero.jpeg").default,
+  preview1: require("./images/portfolio/countries/countries-preview-1.webp").default,
+  preview2: null
+},
+{	
 	path: "/url-shortener",
 	heading: "URL Shortener",
 	description: `This URL shortening landing page interacts with the bitly API using JavaScript fetch requests. 
@@ -11,10 +31,10 @@ const projectData = [
   code: "https://github.com/GlenOttley/url-shortening-api-master",
   background: `One of the trickier aspects of this design was getting the main image to stick to the right 
 	side of the screen whislt mainining a consistent margin with the rest of the page on the left. I achieved this by 
-	performing some artimetic in SASS which calculates the container width for this section.`,
+	performing some arithmetic in SASS which calculates the container width for this section.`,
   frontendMentor: true,
-  prevProjectName: "Crowdfund",
-  prevProjectPath: "crowdfund",
+  prevProjectName: "Countries Fact Site",
+  prevProjectPath: "countries-fact-site",
   nextProjectName: "Planets Fact Site",
   nextProjectPath: "planets-fact-site",
 
@@ -95,61 +115,14 @@ const projectData = [
   frontendMentor: true,
   prevProjectName: "To Do",
   prevProjectPath: "to-do",
-  nextProjectName: "URL Shortener",
-  nextProjectPath: "url-shortener",
+  nextProjectName: "Countries Fact Site",
+  nextProjectPath: "countries-fact-site",
 
   portfolio: require("./images/portfolio/crowdfund/crowdfund-portfolio.jpeg").default,
   hero: require("./images/portfolio/crowdfund/crowdfund-hero.jpeg").default,
   preview1: require("./images/portfolio/crowdfund/crowdfund-preview-1.jpeg").default,
   preview2: require("./images/portfolio/crowdfund/crowdfund-preview-2.jpeg").default
 }
-// {	
-// 	path: "/signup-form",
-// 	heading: "Sign Up Form",
-// 	description: `HTML and CSS were used to make this project fully responsive for mobile and desktop. 
-// 	I used vanilla JavaScript instead of React to create the client-side form validation.`,
-//   skills: "Interaction Design / Responsive Design",
-//   languages: "HTML / CSS / JS",
-//   website: "https://glenottley.github.io/intro-component-with-signup-form-master/",
-//   code: "https://github.com/GlenOttley/intro-component-with-signup-form-master",
-//   background: `This one being a fairly simple project, I wanted to up the level of difficulty a little by not relying 
-//   on external form libraries. Instead, I chose to write my own form validation and error handling. 
-//   It proved to be an aesthetic challenge as well as a coding one.`,
-//   frontendMentor: true,
-//   prevProjectName: "Crowdfund",
-//   prevProjectPath: "crowdfund",
-//   nextProjectName: "FAQ Page",
-//   nextProjectPath: "faq-page",
-
-//   portfolio: require("./images/portfolio/signup/signup-portfolio.jpg").default,
-//   hero: require("./images/portfolio/signup/signup-hero.jpg").default,
-//   preview1: require("./images/portfolio/signup/signup-preview-1.jpg").default,
-//   preview2: null
-// },
-// {	
-// 	path: "/faq-page",
-// 	heading: "FAQ Page",
-// 	description: `To create the drop down effect when answers are selected, I used vanilla JavaScript. 
-// 	The BEM naming convention also came in handy here to keep my CSS sustainable and clean.`,
-//   skills: "Interaction Design / Responsive Design",
-//   languages: "HTML / CSS / JS",
-//   website: "https://glenottley.github.io/faq-accordion-card-main/",
-//   code: "https://github.com/GlenOttley/faq-accordion-card-main",
-//   background: `One of the earlier projects I attempted, this one was full of important lessons along my coding journey. 
-//   The drop down answers were tricky to implement and I learned a lot about image placement within responsive layouts. 
-//   All in all, I feel like this project gave me some important skills as a web developer, skills that I can now 
-//   confidently apply to almost any project I take on.`,
-//   frontendMentor: true,
-//   prevProjectName: "Signup Form",
-//   prevProjectPath: "signup-form",
-//   nextProjectName: "Planets Fact Site",
-//   nextProjectPath: "planets-fact-site",
-
-//   portfolio: require("./images/portfolio/faq/faq-portfolio.jpg").default,
-//   hero: require("./images/portfolio/faq/faq-hero.jpg").default,
-//   preview1: require("./images/portfolio/faq/faq-preview-1.jpg").default,
-//   preview2: null
-// }
 ]
 
 export default projectData
