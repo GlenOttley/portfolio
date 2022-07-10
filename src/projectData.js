@@ -21,7 +21,7 @@ const projectData = [
     hero: require('./images/portfolio/invoice/invoice-hero.jpg').default,
     preview1: require('./images/portfolio/invoice/invoice-preview-1.jpg')
       .default,
-    preview2: require('./images/portfolio/invoice/invoice-preview-1=2.jpg')
+    preview2: require('./images/portfolio/invoice/invoice-preview-2.jpg')
       .default,
   },
   {
