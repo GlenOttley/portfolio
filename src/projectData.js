@@ -12,7 +12,7 @@ const projectData = [
     On the front end, Material UI is used to provide dynamic theming, React Hook Form for form validation, and Redux with Redux toolkit for state management.`,
     frontendMentor: true,
     prevProjectName: 'Crowdfund',
-    prevProjectPath: 'crowdfund',
+    prevProjectPath: '/crowdfund',
     nextProjectName: 'Countries Fact Site',
     nextProjectPath: '/countries-fact-site',
 
@@ -35,9 +35,9 @@ const projectData = [
     background: `Although perhaps a little overkill for a project such as this, Redux is used for state management on this project. API requests are made using Thunks, both for fetching all of the countries as well as each individual country.`,
     frontendMentor: true,
     prevProjectName: 'Crowdfund',
-    prevProjectPath: 'crowdfund',
+    prevProjectPath: '/crowdfund',
     nextProjectName: 'URL Shortener',
-    nextProjectPath: 'url-shortener',
+    nextProjectPath: '/url-shortener',
 
     portfolio: require('./images/portfolio/countries/countries-portfolio.webp')
       .default,
@@ -63,7 +63,7 @@ const projectData = [
     prevProjectName: 'Invoice App',
     prevProjectPath: '/invoice-app',
     nextProjectName: 'Planets Fact Site',
-    nextProjectPath: 'planets-fact-site',
+    nextProjectPath: '/planets-fact-site',
 
     portfolio:
       require('./images/portfolio/url-shortener/url-shortener-portfolio.webp')
@@ -93,9 +93,9 @@ const projectData = [
   It's one of my more recent projects and it's one that I’m particularly proud of.`,
     frontendMentor: true,
     prevProjectName: 'URL Shortener',
-    prevProjectPath: 'url-shortener',
+    prevProjectPath: '/url-shortener',
     nextProjectName: 'To Do',
-    nextProjectPath: 'to-do',
+    nextProjectPath: '/to-do',
 
     portfolio: require('./images/portfolio/planets/planets-portfolio.webp')
       .default,
@@ -125,9 +125,9 @@ const projectData = [
    will not be saved if you refresh or leave the page. Don’t use it to make your grocery list just yet!`,
     frontendMentor: true,
     prevProjectName: 'Planets Fact Site',
-    prevProjectPath: 'planets-fact-site',
+    prevProjectPath: '/planets-fact-site',
     nextProjectName: 'Crowdfund',
-    nextProjectPath: 'crowdfund',
+    nextProjectPath: '/crowdfund',
 
     portfolio: require('./images/portfolio/todo/todo-portfolio.jpeg').default,
     hero: require('./images/portfolio/todo/todo-hero.jpeg').default,
@@ -149,9 +149,9 @@ const projectData = [
   Implementing the modal design ensures that the app is functional, intuitive, and easy on the eyes.`,
     frontendMentor: true,
     prevProjectName: 'To Do',
-    prevProjectPath: 'to-do',
-    nextProjectName: 'Countries Fact Site',
-    nextProjectPath: 'countries-fact-site',
+    prevProjectPath: '/to-do',
+    nextProjectName: 'Invoice App',
+    nextProjectPath: '/invoice-app',
 
     portfolio: require('./images/portfolio/crowdfund/crowdfund-portfolio.jpeg')
       .default,
