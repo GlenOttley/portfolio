@@ -9,9 +9,7 @@ const projectData = [
     code: 'https://github.com/GlenOttley/invoice-app',
     background: `For this project I decided to challenge myself on many levels, not only by building this out as a full stack application - 
     but also through the use of multiple new languages and tools. Both the front and back end are written in Typescript, with MongoDB being used for the database.
-    On the front end, Material UI is used to provide dynamic theming, React Hook Form for form validation, and Redux with Redux toolkit for state management.
-    Please use the following credentials if you wish to see some pre-created invoices - email: johndoe@mail.com password: 1234. 
-    Alternatively, you can sign up and create your own! (dummy / fake email addresses are welcome).`,
+    On the front end, Material UI is used to provide dynamic theming, React Hook Form for form validation, and Redux with Redux toolkit for state management.`,
     frontendMentor: true,
     prevProjectName: 'Crowdfund',
     prevProjectPath: 'crowdfund',
