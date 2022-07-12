@@ -34,45 +34,16 @@ const projectData = [
     code: 'https://github.com/GlenOttley/rest-countries-api',
     background: `Although perhaps a little overkill for a project such as this, Redux is used for state management on this project. API requests are made using Thunks, both for fetching all of the countries as well as each individual country.`,
     frontendMentor: true,
-    prevProjectName: 'Crowdfund',
-    prevProjectPath: 'crowdfund',
-    nextProjectName: 'URL Shortener',
-    nextProjectPath: 'url-shortener',
+    prevProjectName: 'Invoice App',
+    prevProjectPath: 'invoice-app',
+    nextProjectName: 'Planets Fact Site',
+    nextProjectPath: 'planets-fact-site',
 
     portfolio: require('./images/portfolio/countries/countries-portfolio.webp')
       .default,
     hero: require('./images/portfolio/countries/countries-hero.jpeg').default,
     preview1: require('./images/portfolio/countries/countries-preview-1.webp')
       .default,
-    preview2: null,
-  },
-  {
-    path: '/url-shortener',
-    heading: 'URL Shortener',
-    description: `This URL shortening landing page interacts with the bitly API using JavaScript fetch requests. 
-	This has been one of the most SASS-heavy projects I have attempted so far, with extensive use of mixins to create 
-	the responsive design.`,
-    skills: 'API Interaction / Responsive Design',
-    languages: 'HTML / CSS / SASS / JS / React',
-    website: 'https://admiring-poitras-636607.netlify.app/',
-    code: 'https://github.com/GlenOttley/url-shortening-api-master',
-    background: `One of the trickier aspects of this design was getting the main image to stick to the right 
-	side of the screen whislt mainining a consistent margin with the rest of the page on the left. I achieved this by 
-	performing some arithmetic in SASS which calculates the container width for this section.`,
-    frontendMentor: true,
-    prevProjectName: 'Invoice App',
-    prevProjectPath: 'invoice-app',
-    nextProjectName: 'Planets Fact Site',
-    nextProjectPath: 'planets-fact-site',
-
-    portfolio:
-      require('./images/portfolio/url-shortener/url-shortener-portfolio.webp')
-        .default,
-    hero: require('./images/portfolio/url-shortener/url-shortener-hero.jpg')
-      .default,
-    preview1:
-      require('./images/portfolio/url-shortener/url-shortener-preview-1.webp')
-        .default,
     preview2: null,
   },
   {
@@ -92,10 +63,10 @@ const projectData = [
   fairly significant amount of media queries, I chose to utilise SASS mixins and variables. 
   It's one of my more recent projects and it's one that I’m particularly proud of.`,
     frontendMentor: true,
-    prevProjectName: 'URL Shortener',
-    prevProjectPath: 'url-shortener',
-    nextProjectName: 'To Do',
-    nextProjectPath: 'to-do',
+    prevProjectName: 'Countries Fact Site',
+    prevProjectPath: 'countries-fact-site',
+    nextProjectName: 'URL Shortener',
+    nextProjectPath: 'url-shortener',
 
     portfolio: require('./images/portfolio/planets/planets-portfolio.webp')
       .default,
@@ -105,6 +76,36 @@ const projectData = [
     preview2: require('./images/portfolio/planets/planets-preview-2.webp')
       .default,
   },
+  {
+    path: '/url-shortener',
+    heading: 'URL Shortener',
+    description: `This URL shortening landing page interacts with the bitly API using JavaScript fetch requests. 
+	This has been one of the most SASS-heavy projects I have attempted so far, with extensive use of mixins to create 
+	the responsive design.`,
+    skills: 'API Interaction / Responsive Design',
+    languages: 'HTML / CSS / SASS / JS / React',
+    website: 'https://admiring-poitras-636607.netlify.app/',
+    code: 'https://github.com/GlenOttley/url-shortening-api-master',
+    background: `One of the trickier aspects of this design was getting the main image to stick to the right 
+	side of the screen whislt mainining a consistent margin with the rest of the page on the left. I achieved this by 
+	performing some arithmetic in SASS which calculates the container width for this section.`,
+    frontendMentor: true,
+    prevProjectName: 'Planets Fact Site',
+    prevProjectPath: 'planets-fact-site',
+    nextProjectName: 'To Do',
+    nextProjectPath: 'to-do',
+
+    portfolio:
+      require('./images/portfolio/url-shortener/url-shortener-portfolio.webp')
+        .default,
+    hero: require('./images/portfolio/url-shortener/url-shortener-hero.jpg')
+      .default,
+    preview1:
+      require('./images/portfolio/url-shortener/url-shortener-preview-1.webp')
+        .default,
+    preview2: null,
+  },
+
   {
     path: '/to-do',
     heading: 'To Do',
@@ -124,8 +125,8 @@ const projectData = [
   Please note that since this project is hosted on GitHub pages, the backend code is disabled and your notes
    will not be saved if you refresh or leave the page. Don’t use it to make your grocery list just yet!`,
     frontendMentor: true,
-    prevProjectName: 'Planets Fact Site',
-    prevProjectPath: 'planets-fact-site',
+    prevProjectName: 'URL Shortener',
+    prevProjectPath: 'url-shortener',
     nextProjectName: 'Crowdfund',
     nextProjectPath: 'crowdfund',
 
