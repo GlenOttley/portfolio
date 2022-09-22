@@ -1,9 +1,36 @@
 const projectData = [
   {
+    path: '/audiophile',
+    heading: 'Audiophile',
+    description: `This e-commerce site allows you to browse and buy the best (imaginary) audio products!`,
+    skills: 'Full Stack Development / Test Driven Development',
+    languages:
+      'Typescript / Node / React / Redux / MUI / MongoDB / React Testing Library / Jest',
+    website: 'https://audiophile-ecommerce-webapp.herokuapp.com/',
+    code: 'https://github.com/GlenOttley/audiophile-ecommerce-website',
+    background: `My main goal with this project was to ensure that both the frontend and backend had good test coverage for the key features (e.g. handling the cart).
+    I also wanted to reinforce the skills learned when building my last project - 'Invoice Application', which you can check out right here on my portfolio. 
+    It occurred to me that it would be helpful to be able to share type definitions, interfaces etc between both the client and server. To achieve this I made use of 
+    'lerna', a build system which simplifies the development of monorepos.`,
+    frontendMentor: true,
+    prevProjectName: 'Crowdfund',
+    prevProjectPath: 'crowdfund',
+    nextProjectName: 'Invoice App',
+    nextProjectPath: 'invoice-app',
+
+    portfolio: require('./images/portfolio/audiophile/audiophile-portfolio.jpg')
+      .default,
+    hero: require('./images/portfolio/audiophile/audiophile-hero.jpg').default,
+    preview1: require('./images/portfolio/audiophile/audiophile-preview-1.jpg')
+      .default,
+    preview2: require('./images/portfolio/audiophile/audiophile-preview-2.jpg')
+      .default,
+  },
+  {
     path: '/invoice-app',
     heading: 'Invoice App',
     description: `This web app allows you to create and manage invoices online with ease.`,
-    skills: 'State Management / Responsive Design',
+    skills: 'Full Stack Development / Responsive Design',
     languages: 'Typescript / Node / React / Redux / MUI / MongoDB',
     website: 'https://invoice-application-mern.herokuapp.com/',
     code: 'https://github.com/GlenOttley/invoice-app',
@@ -151,8 +178,8 @@ const projectData = [
     frontendMentor: true,
     prevProjectName: 'To Do',
     prevProjectPath: 'to-do',
-    nextProjectName: 'Invoice App',
-    nextProjectPath: 'invoice-app',
+    nextProjectName: 'Audiophile',
+    nextProjectPath: 'audiophile',
 
     portfolio: require('./images/portfolio/crowdfund/crowdfund-portfolio.jpeg')
       .default,
