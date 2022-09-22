@@ -38,8 +38,8 @@ const projectData = [
     but also through the use of multiple new languages and tools. Both the front and back end are written in Typescript, with MongoDB being used for the database.
     On the front end, Material UI is used to provide dynamic theming, React Hook Form for form validation, and Redux with Redux toolkit for state management.`,
     frontendMentor: true,
-    prevProjectName: 'Crowdfund',
-    prevProjectPath: 'crowdfund',
+    prevProjectName: 'Audiophile',
+    prevProjectPath: 'audiophile',
     nextProjectName: 'Countries Fact Site',
     nextProjectPath: 'countries-fact-site',
 
