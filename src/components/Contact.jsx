@@ -1,172 +1,153 @@
-import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useForm } from 'react-hook-form'
+import { useState } from 'react'
 
 function Contact({ breakPoints }) {
-
-	function encode(data) {
-	  return Object.keys(data)
-	    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-	    .join('&')
-	}
-
-  const { register, handleSubmit, reset, formState: { errors } } = useForm({
-  	mode: "onChange"
-  });
-
-  const [state, setState] = useState({});
-  
-  const handleChange = e => setState({
-  	...state, [e.target.name]: e.target.value
-  })
-
-  const onSubmit = (data, e) => {
-  	e.preventDefault();
-  	fetch("/", {
-  		method: "POST",
-  		headers: {"Content-Type": "application/x-www-form-urlencoded"},
-  		body: encode({
-  			"form-name": "contact-form",
-  			...state
-  		})
-  	})
-  	.then(response => {
-  		alert("Thanks for getting in touch, I will get back to you shortly.");
-  		reset();
-  	})
-  	.catch(error => {
-  		alert("Something went wrong, please try again.");
-  	})
+  function encode(data) {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
   }
 
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    mode: 'onChange',
+  })
 
-	return (
-		<div className="contact container">
+  const [state, setState] = useState({})
 
-			<div className="contact__message">
-				<h2 className="contact__heading">Get in Touch</h2>
-				
-				<div className="contact__right">
-					<p>Thank you for taking the time to peruse my portfolio so far. 
-					I’d love to hear what you’re working on and how I could help. 
-					I’m looking for an exciting new role with a great company
-					in office or remote.
-					Diligent, optimistic and detail-oriented, 
-					I think I would be an asset to your web development team.  
-					Please get in touch using this form. </p>
-		    </div>
+  const handleChange = (e) =>
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    })
 
-		  </div>
+  const onSubmit = (data, e) => {
+    e.preventDefault()
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'contact-form',
+        ...state,
+      }),
+    })
+      .then((response) => {
+        alert('Thanks for getting in touch, I will get back to you shortly.')
+        reset()
+      })
+      .catch((error) => {
+        alert('Something went wrong, please try again.')
+      })
+  }
 
-		  <div className="form">
+  return (
+    <div className='contact container'>
+      <div className='contact__message'>
+        <h2 className='contact__heading'>Get in Touch</h2>
 
-		  	<h2 className="form__heading">Contact Me</h2>
+        <div className='contact__right'>
+          <p>
+            Thank you for taking the time to peruse my portfolio.
+            <br></br>
+            <br></br>
+            <strong>Interested in collaborating?</strong> If you're looking to enhance
+            your projects and leverage my skills, I'm keen to connect. Let's discuss how
+            we can work together by filling out the contact form below. I look forward to
+            hearing from you!
+          </p>
+        </div>
+      </div>
 
-			  <form 
-			  id="contact-form" 
-			  name="contact-form"
-			  method="POST"
-			  data-netlify="true"
-			  data-netlify-honeypot="bot-field"
-			  onSubmit={handleSubmit(onSubmit)}
-			  >
+      <div className='form'>
+        <h2 className='form__heading'>Contact Me</h2>
 
-			  	<input type="hidden" name="form-name" value="contact" />
+        <form
+          id='contact-form'
+          name='contact-form'
+          method='POST'
+          data-netlify='true'
+          data-netlify-honeypot='bot-field'
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <input type='hidden' name='form-name' value='contact' />
 
-			    <div className="form__group">
+          <div className='form__group'>
+            <label className='form__label' htmlFor='name'>
+              Name
+            </label>
 
-		        <label
-		        className="form__label" 
-		        htmlFor="name">
-		        Name
-		        </label>
+            <input
+              {...register('name', {
+                required: 'This field is required',
+              })}
+              type='text'
+              name='name'
+              onChange={handleChange}
+              className='form__field'
+              placeholder='Jane Appleseed'
+              style={{ outline: errors.name ? '2px solid var(--bright-red' : null }}
+            />
 
-		        <input {
-		        	...register("name", {
-		        		required: "This field is required" 
-		        	})}
-		        type="text" 
-		        name="name"
-		        onChange={handleChange}
-		        className="form__field"     
-		        placeholder="Jane Appleseed"
-		        style={{ outline: errors.name ?  "2px solid var(--bright-red" : null }}
-		        />
+            {errors.name && <span className='form__error'>{errors.name.message}</span>}
+          </div>
 
-		        {errors.name && 
-		        	<span className="form__error">{errors.name.message}</span>
-		        }
+          <div className='form__group'>
+            <label className='form__label' htmlFor='exampleInputEmail1'>
+              Email Address
+            </label>
 
-			    </div>
+            <input
+              {...register('email', {
+                required: 'This field is required',
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: 'Please use a valid email address',
+                },
+              })}
+              type='text'
+              name='email'
+              onChange={handleChange}
+              className='form__field'
+              placeholder='email@example.com'
+              style={{ outline: errors.email ? '2px solid var(--bright-red' : null }}
+            />
 
-			    <div className="form__group">
+            {errors.email && <span className='form__error'>{errors.email.message}</span>}
+          </div>
 
-		        <label
-		        className="form__label" 
-		        htmlFor="exampleInputEmail1">
-		        Email Address
-		        </label>
+          <div className='form__group'>
+            <label className='form__label' htmlFor='message'>
+              Message
+            </label>
 
-		        <input {
-		        	...register("email", {
-		        		required: "This field is required",
-		        		pattern: {
-		        			value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-		        			message: "Please use a valid email address"
-		        		}
-		        	})}
-		        type="text"
-		        name="email"
-		        onChange={handleChange}
-		        className="form__field"
-		        placeholder="email@example.com"
-		        style={{ outline: errors.email ?  "2px solid var(--bright-red" : null }}
-		        />
+            <textarea
+              {...register('message', {
+                required: 'This field is required',
+              })}
+              className='form__field'
+              name='message'
+              onChange={handleChange}
+              rows='3'
+              placeholder='How can I help?'
+              style={{ outline: errors.message ? '2px solid var(--bright-red' : null }}
+            ></textarea>
 
-		        {errors.email && 
-		        	<span className="form__error">{errors.email.message}</span>
-		        }
+            {errors.message && (
+              <span className='form__error'>{errors.message.message}</span>
+            )}
+          </div>
 
-			    </div>
-
-			    <div className="form__group">
-
-		        <label
-		        className="form__label" 
-		        htmlFor="message">
-		        Message
-		        </label>
-
-		        <textarea {
-		        	...register("message", {
-		        		required: "This field is required" 
-		        	})}
-		        className="form__field" 
-		        name="message"
-		        onChange={handleChange}
-		        rows="3"        
-		        placeholder="How can I help?"
-		        style={{ outline: errors.message ?  "2px solid var(--bright-red" : null }}
-		        >
-		        </textarea>
-
-		        {errors.message && 
-		        	<span className="form__error">{errors.message.message}</span>
-		        }
-
-			    </div>
-
-			    <button 
-			    type="submit"
-	  			className="btn btn-primary">
-	  				<p className="btn__text btn-primary__text">SEND MESSAGE</p>
-	  			</button>
-
-				</form>
-
-			</div>
-
-		</div>
-	)
+          <button type='submit' className='btn btn-primary'>
+            <p className='btn__text btn-primary__text'>SEND MESSAGE</p>
+          </button>
+        </form>
+      </div>
+    </div>
+  )
 }
 
-export default Contact;
+export default Contact

@@ -61,25 +61,19 @@ function Home({ breakPoints, setActive }) {
 
       <div className='about'>
         <div className='about__image'>
-          <img
-            alt='site creators professional portrait shot'
-            src={profilePicture}
-          />
+          <img alt='site creators professional portrait shot' src={profilePicture} />
         </div>
 
         <div className='about__message' ref={aboutRef}>
           <h2 className='about__heading'>About Me</h2>
           <p className='about__text'>
-            Thanks for stopping by. I am an enthusiastic and driven web
-            developer looking for a role within a brilliant company. I’m excited
-            to learn from and collaborate with experienced developers to improve
-            my skills and take projects from concept to reality.
-            <br></br>
-            <br></br>I focus on writing clean, maintainable code utilizing the
-            MERN stack as my go-to.
+            Greetings! I'm Glen, a full stack web developer specializing in MERN stack
+            development. I create awesome client-facing applications and robust
+            server-side API's while prioritizing inclusive and accessible digital
+            experiences for all!
             <br></br>
             <br></br>
-            Please check out my work below!
+            Let's work together to build exceptional and inclusive web solutions.
           </p>
 
           <Link
